@@ -3,7 +3,10 @@ const submitBtn = document.getElementById("submitBtn");
 const otherRadio = document.getElementById("otherRadio");
 const otherSectorInput = document.getElementById("otherSectorInput");
 const form = document.getElementById("problemForm");
-const modal = document.getElementById("modal");
+
+// Modals
+const successModal = document.getElementById("modal");
+const processingModal = document.getElementById("processingModal");
 
 // Enable submit button when problem field has text
 problemInput.addEventListener("input", () => {
@@ -39,7 +42,9 @@ form.addEventListener("submit", async (e) => {
     timestamp: new Date().toISOString(),
   };
 
-  // Send to backend
+  // Show processing modal
+  processingModal.style.display = "flex";
+
   try {
     await fetch("https://tech-aid-backend.onrender.com/api/submit", {
       method: "POST",
@@ -47,14 +52,24 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(data),
     });
 
+    // Hide processing modal and show success modal
+    processingModal.style.display = "none";
+    successModal.style.display = "flex";
+
+    // Auto-close success modal after 3 seconds
+    setTimeout(() => {
+      successModal.style.display = "none";
+    }, 3000);
+
     form.reset();
     submitBtn.disabled = true;
-    modal.style.display = "flex";
+    otherSectorInput.style.display = "none";
   } catch (err) {
+    processingModal.style.display = "none";
     alert("Error submitting problem. Please try again.");
   }
 });
 
 function closeModal() {
-  modal.style.display = "none";
+  successModal.style.display = "none";
 }
