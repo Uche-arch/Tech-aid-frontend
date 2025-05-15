@@ -41,7 +41,7 @@ form.addEventListener("submit", async (e) => {
 
   // Send to backend
   try {
-    await fetch("http://localhost:3000/api/submit", {
+    await fetch("https://tech-aid-backend.onrender.com/api/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
