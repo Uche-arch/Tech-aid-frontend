@@ -10,16 +10,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  height: 100vh;
   transition: background-color 0.3s, color 0.3s;
 }
 .container {
   background-color: #fff;
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
