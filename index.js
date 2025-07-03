@@ -7,6 +7,7 @@ const form = document.getElementById("problemForm");
 // Modals
 const successModal = document.getElementById("modal");
 const processingModal = document.getElementById("processingModal");
+const processingText = document.getElementById("processingText"); // Make sure this exists in your HTML
 
 // Enable submit button when problem field has text
 problemInput.addEventListener("input", () => {
@@ -42,7 +43,20 @@ form.addEventListener("submit", async (e) => {
     timestamp: new Date().toISOString(),
   };
 
-  // Show processing modal
+  // Random processing messages
+  const messages = [
+    "Analyzing your submission...",
+    "Routing your problem to our solution engine...",
+    "Compiling potential solutions...",
+    "Logging your idea into our system...",
+    "Looking for tech that can help...",
+    "You're helping spark innovation...",
+    "Scanning the problem landscape...",
+  ];
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  // Show processing modal with random message
+  if (processingText) processingText.textContent = randomMessage;
   processingModal.style.display = "flex";
 
   try {

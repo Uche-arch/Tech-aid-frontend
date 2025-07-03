@@ -173,8 +173,8 @@ body.dark-mode .modal-content {
 
   /* DARK MODE STYLES */
   body.dark-mode {
-    background-color: #121212;
     color: #f5f5f5;
+    background: linear-gradient(145deg, #0c0c0f, #111318); /* subtle dark gradient */
   }
   
   body.dark-mode .container {
