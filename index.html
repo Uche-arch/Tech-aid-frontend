@@ -3,61 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Problem Submission Platform</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <title>Solvix</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <div class="container">
-
-    <div class="toggle-theme">
-      <button id="themeToggle">🌙 Toggle Dark Mode</button>
-    </div>
-
-    <h1>Submit a Problem</h1>
-    
-    <form id="problemForm">
-      <label for="problem">Describe the Problem *</label>
-      <textarea id="problem" required></textarea>
-
-      <label for="country">Country</label>
-      <input type="text" id="country" placeholder="e.g. Nigeria" />
-
-      <label>Sector Affected</label>
-      <div class="sectors">
-        <label><input type="radio" name="sector" value="Health" /> Health</label>
-        <label><input type="radio" name="sector" value="Education" /> Education</label>
-        <label><input type="radio" name="sector" value="Finance" /> Finance</label>
-        <label><input type="radio" name="sector" value="Other" id="otherRadio" /> Other</label>
-      </div>
-      <input type="text" id="otherSectorInput" placeholder="Enter other sector" style="display: none;" />
-
-      <label for="solution">How do you think tech could help? (optional)</label>
-      <textarea id="solution"></textarea>
-
-      <label for="email">Your Email (optional)</label>
-      <input type="email" id="email" placeholder="example@email.com" />
-
-      <button type="submit" id="submitBtn" disabled>Submit Problem</button>
-    </form>
+    <h1>Solvix</h1>
+    <p class="tagline">Submit your problem, solve the world’s.</p>
+    <a href="form.html" class="cta-button">Submit a problem</a>
   </div>
-
-
-  <!-- Processing Modal -->
-<div id="processingModal" class="modal">
-  <div class="modal-content">
-    <p>⏳ Submitting your problem... Please wait</p>
-  </div>
-</div>
-
-  <!-- Success Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <p>✅ Problem successfully submitted!</p>
-      <button onclick="closeModal()">Close</button>
-    </div>
-  </div>
-
-  <script src="index.js"></script>
-  <script src="darkmode.js"></script>
 </body>
 </html>

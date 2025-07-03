@@ -97,7 +97,7 @@ button[disabled] {
   border: none;
   color: #3b82f6;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 

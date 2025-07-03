@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #0c0c0f, #111318); /* subtle dark gradient */
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Center container */
+  .container {
+    text-align: center;
+  }
+  
+  /* Logo */
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  /* Tagline */
+  .tagline {
+    font-size: 1.25rem;
+    color: #b0b3b8;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    background-color: #1a4de3;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.9rem 1.7rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #003ecb;
+  }
+
+  @media screen and (max-width: 390px) {
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0rem;
+    }
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .cta-button {
+        padding: .7rem 1rem;
+        font-size: 1rem;
+    }
+  }
+  
