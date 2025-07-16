@@ -3,7 +3,7 @@ const panel = document.getElementById("adminPanel");
 const list = document.getElementById("problemList");
 
 let isAuthed = false;
-const backendURL = "https://tech-aid-backend.onrender.com"; // ✅ Replace with your Render URL
+const backendURL = "https://tech-aid-backend-v2.onrender.com"; // ✅ Replace with your Render URL
 
 async function authAdmin() {
   const entered = document.getElementById("adminPass").value;

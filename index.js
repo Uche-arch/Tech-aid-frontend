@@ -60,7 +60,7 @@ form.addEventListener("submit", async (e) => {
   processingModal.style.display = "flex";
 
   try {
-    await fetch("https://tech-aid-backend.onrender.com/api/submit", {
+    await fetch("https://tech-aid-backend-v2.onrender.com/api/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
